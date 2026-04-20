@@ -167,6 +167,7 @@ GROUP BY housing
 ORDER BY COUNT(y) DESC;
 ```
 <img width="292" height="110" alt="14" src="https://github.com/user-attachments/assets/255b9d8b-9e29-429d-ab62-9dd9a458bc5f" />
+
 ### Answer: Yes
 
 ### 5. Did people with existing loan subscribe more?
@@ -179,6 +180,7 @@ GROUP BY loan
 ORDER BY COUNT(y) DESC;
 ```
 <img width="246" height="109" alt="15" src="https://github.com/user-attachments/assets/ebbbc6fc-78dc-45f1-8238-3478d38177fa" />
+
 ### Answer: No, the prople with no loan subscribed the most
 
 ### 6. What job do the people who responded positively the most do?
@@ -191,6 +193,7 @@ GROUP BY job
 ORDER BY COUNT(y) DESC;
 ```
 <img width="348" height="179" alt="16" src="https://github.com/user-attachments/assets/8ceccf61-9140-4f54-a5b9-ee347742a3db" />
+
 ### Answer: Admin.
 
 ### 7. What season was the best to call?
@@ -203,6 +206,7 @@ GROUP BY month
 ORDER BY COUNT(y) DESC;
 ```
 <img width="293" height="181" alt="17" src="https://github.com/user-attachments/assets/c132739c-29e0-44af-8495-8dac0a0e2f26" />
+
 ### Answer: Mid Spring to Summer, (APril - August)
 
 ### 8. What day of the week was the best to call?
@@ -215,6 +219,7 @@ GROUP BY day_of_week
 ORDER BY COUNT(y) DESC;
 ```
 <img width="321" height="161" alt="18" src="https://github.com/user-attachments/assets/306f8c8c-0824-421b-a2f2-a75560abc8dc" />
+
 ### Answer: Thursday
 
 ### 9. What contact frequency yielded the best result?
@@ -227,6 +232,7 @@ GROUP BY campaign
 ORDER BY COUNT(y) DESC;
 ```
 <img width="309" height="187" alt="19" src="https://github.com/user-attachments/assets/b82dde58-23dc-4cbe-a18d-3c06ab1056c7" />
+
 ### INSIGHT
 The people that were called less than 3 times said yes the most, the team is to look into this to save cost on unyielding calls
 
@@ -240,6 +246,7 @@ GROUP BY euribor3m
 ORDER BY COUNT(y) DESC;
 ```
 <img width="317" height="181" alt="20" src="https://github.com/user-attachments/assets/4d384bce-5111-4e0b-ad01-8ad3daac8659" />
+
 ### Answer: No it didn't
 
 ### 11. what is the marital status of the people who responded positively the most? 
