@@ -44,7 +44,7 @@ ORDER BY COUNT(Marital) DESC;
 ```
 <img width="310" height="179" alt="3" src="https://github.com/user-attachments/assets/1e404021-bfbf-4524-9ed4-24fdcecf4788" />
 
-### INSIGHT
+### Insight
 The married people did blue collar jobs the most, while the single and divorced did admin the most. The married people were also the most slef employed.
 
 ## Dashboard
@@ -140,7 +140,7 @@ ORDER BY COUNT(education) DESC;
 ```
 <img width="280" height="182" alt="12" src="https://github.com/user-attachments/assets/81b81163-dd60-45a8-9bcb-aecd34dfb2f7" />
 
-### INSIGHT
+### Insight
 People with university degree did admin the most, people with professional degree worked as technicians the most and people with basic 9y education did blue-collar jobs the most.
 
 ### 3. What age group responded positively to the fixed deposit the most?
@@ -154,7 +154,7 @@ ORDER BY COUNT(y) DESC;
 ```
 <img width="274" height="180" alt="13" src="https://github.com/user-attachments/assets/ea034ce8-b861-4d9f-b832-ee4e54ce2592" />
 
-### INSIGHT
+### Insight
 People in their 30's responded positively to the fixed deposit the most
 
 ### 4. Did people with houses subscribe more?
@@ -233,7 +233,7 @@ ORDER BY COUNT(y) DESC;
 ```
 <img width="309" height="187" alt="19" src="https://github.com/user-attachments/assets/b82dde58-23dc-4cbe-a18d-3c06ab1056c7" />
 
-### INSIGHT
+### Insight
 The people that were called less than 3 times said yes the most, the team is to look into this to save cost on unyielding calls
 
 ### 10. Did the high interest rate have effect on the people who gave positive feedback? 
@@ -260,7 +260,7 @@ ORDER BY COUNT(y) DESC;
 ```
 <img width="298" height="134" alt="21" src="https://github.com/user-attachments/assets/ce923933-aeaa-4d13-977a-66de4078c101" />
 
-### INSIGHT
+### Insight
 Married people responded the most positively to the fixed deposit 
 
 ### 12. what is the education level of the people who responded positively the most? 
@@ -274,7 +274,9 @@ ORDER BY COUNT(y) DESC;
 ```
 <img width="394" height="184" alt="22" src="https://github.com/user-attachments/assets/535a7615-5afe-4210-b741-d4151235eae8" />
 
-### ANSWER: The people with a university degree responded positively the most to the fixed deposit
+### Answer: The people with a university degree responded positively the most to the fixed deposit
+
+
 
 ## DASHBOARD
 Bank Marketing Analysis based on the day of the week, housing situation of the people with positive response and the education level with the most positive yield.
