@@ -13,7 +13,7 @@ This data was gotten from kaggle [download here] (https://www.kaggle.com/dataset
 
 ## 1. Marital status and type of job
 
-### 1a. What type of job did the married people do
+### 1a. What type of job did the married people do?
 ``` SQL
 SELECT job as "Type of Job", COUNT(marital) as "Number of Married People"
 FROM Bank
@@ -24,7 +24,7 @@ ORDER BY COUNT(Marital) DESC;
 <img width="289" height="180" alt="1" src="https://github.com/user-attachments/assets/4f6c7bef-4a48-4ec7-ab82-6b26a159072e" />
 
 
-### 1b. What type of job did the single people do
+### 1b. What type of job did the single people do?
 ``` SQL
 SELECT job as "Type of Job", COUNT(marital) as "Number of Single People"
 FROM Bank
@@ -34,7 +34,7 @@ ORDER BY COUNT(Marital) DESC;
 ```
 <img width="295" height="180" alt="2" src="https://github.com/user-attachments/assets/130cbb4d-c654-444c-8743-8b5ee140f8e3" />
 
-### 1c. What type of job did the divorced people do
+### 1c. What type of job did the divorced people do?
 ``` SQL
 SELECT job as "Type of Job", COUNT(marital) as "Number of Divorced People"
 FROM Bank
@@ -143,7 +143,7 @@ ORDER BY COUNT(education) DESC;
 ### INSIGHT
 People with university degree did admin the most, people with professional degree worked as technicians the most and people with basic 9y education did blue-collar jobs the most.
 
-### 3. What age group responded positively to the fixed deposit the most
+### 3. What age group responded positively to the fixed deposit the most?
 
 ```SQL
 SELECT age, COUNT(y) AS 'Positive response to fixed deposit'
@@ -156,3 +156,120 @@ ORDER BY COUNT(y) DESC;
 
 ### INSIGHT
 People in their 30's responded positively to the fixed deposit the most
+
+### 4. Did people with houses subscribe more?
+
+```SQL
+SELECT housing, COUNT(y) AS 'Positive response to fixed deposit'
+FROM Bank
+WHERE y = 'yes'
+GROUP BY housing
+ORDER BY COUNT(y) DESC;
+```
+<img width="292" height="110" alt="14" src="https://github.com/user-attachments/assets/255b9d8b-9e29-429d-ab62-9dd9a458bc5f" />
+### Answer: Yes
+
+### 5. Did people with existing loan subscribe more?
+
+```SQL
+SELECT loan, COUNT(y) AS 'Response to fixed deposit'
+FROM Bank
+WHERE y = 'yes'
+GROUP BY loan
+ORDER BY COUNT(y) DESC;
+```
+<img width="246" height="109" alt="15" src="https://github.com/user-attachments/assets/ebbbc6fc-78dc-45f1-8238-3478d38177fa" />
+### Answer: No, the prople with no loan subscribed the most
+
+### 6. What job do the people who responded positively the most do?
+
+```SQL
+SELECT job, COUNT(y) AS 'Positive response to fixed deposit'
+FROM Bank
+WHERE y = 'yes'
+GROUP BY job
+ORDER BY COUNT(y) DESC;
+```
+<img width="348" height="179" alt="16" src="https://github.com/user-attachments/assets/8ceccf61-9140-4f54-a5b9-ee347742a3db" />
+### Answer: Admin.
+
+### 7. What season was the best to call?
+
+```SQL
+SELECT month, COUNT(y) AS 'Positive response to fixed deposit'
+FROM Bank
+where y = 'yes'
+GROUP BY month
+ORDER BY COUNT(y) DESC;
+```
+<img width="293" height="181" alt="17" src="https://github.com/user-attachments/assets/c132739c-29e0-44af-8495-8dac0a0e2f26" />
+### Answer: Mid Spring to Summer, (APril - August)
+
+### 8. What day of the week was the best to call?
+
+```SQL
+SELECT day_of_week, COUNT(y) AS 'Positive response to fixed deposit'
+FROM Bank
+where y = 'yes'
+GROUP BY day_of_week
+ORDER BY COUNT(y) DESC;
+```
+<img width="321" height="161" alt="18" src="https://github.com/user-attachments/assets/306f8c8c-0824-421b-a2f2-a75560abc8dc" />
+### Answer: Thursday
+
+### 9. What contact frequency yielded the best result?
+
+```SQL
+SELECT campaign, COUNT(y) AS 'Positive response to fixed deposit'
+FROM Bank
+where y = 'yes'
+GROUP BY campaign
+ORDER BY COUNT(y) DESC;
+```
+<img width="309" height="187" alt="19" src="https://github.com/user-attachments/assets/b82dde58-23dc-4cbe-a18d-3c06ab1056c7" />
+### INSIGHT
+The people that were called less than 3 times said yes the most, the team is to look into this to save cost on unyielding calls
+
+### 10. Did the high interest rate have effect on the people who gave positive feedback? 
+
+```SQL
+SELECT euribor3m, COUNT(y) AS 'Positive response to fixed deposit'
+FROM Bank
+where y = 'yes'
+GROUP BY euribor3m
+ORDER BY COUNT(y) DESC;
+```
+<img width="317" height="181" alt="20" src="https://github.com/user-attachments/assets/4d384bce-5111-4e0b-ad01-8ad3daac8659" />
+### Answer: No it didn't
+
+### 11. what is the marital status of the people who responded positively the most? 
+
+```SQL
+SELECT marital, COUNT(y) AS 'Positive response to fixed deposit'
+FROM Bank
+where y = 'yes'
+GROUP BY marital
+ORDER BY COUNT(y) DESC;
+```
+<img width="298" height="134" alt="21" src="https://github.com/user-attachments/assets/ce923933-aeaa-4d13-977a-66de4078c101" />
+
+### INSIGHT
+Married people responded the most positively to the fixed deposit 
+
+### 12. what is the education level of the people who responded positively the most? 
+
+```SQL
+SELECT education, COUNT(y) AS 'Positive response to fixed deposit'
+FROM Bank
+where y = 'yes'
+GROUP BY education
+ORDER BY COUNT(y) DESC;
+```
+<img width="394" height="184" alt="22" src="https://github.com/user-attachments/assets/535a7615-5afe-4210-b741-d4151235eae8" />
+
+### ANSWER: The people with a university degree responded positively the most to the fixed deposit
+
+## DASHBOARD
+Bank Marketing Analysis based on the day of the week, housing situation of the people with positive response and the education level with the most positive yield.
+
+<img width="1313" height="649" alt="23" src="https://github.com/user-attachments/assets/f26d9fdd-ed86-4d44-bf8f-dc21e885149f" />
